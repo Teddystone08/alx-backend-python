@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-    '''
-    import basic async
-    '''
+'''
+    The basics of async.
+'''
 
-    import asyncio
-    import random 
+import asyncio
+import random
 
 
 async def wait_random(max_delay: int = 10) -> float:
     """
-    delay random between 0 and max_delay
+    waits for a random delay between 0 and max_delay (included and float value)
+    seconds and eventually returns it.
     """
     delay = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
